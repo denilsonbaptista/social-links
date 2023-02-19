@@ -18,10 +18,14 @@ function toggleMode() {
 
   img.setAttribute(
     'src',
-    html.classList.contains('light') ? './assets/avatar-light.png' : './assets/avatar.png'
+    html.classList.contains('light')
+      ? './assets/avatar-light.png'
+      : './assets/avatar.png'
   )
   img.setAttribute(
     'alt',
-    html.classList.contains('light') ? 'Foto de Denilson com um chapéu de palha' : 'Foto de Denilson meio sério com o fundo preto, porém ele está bonitão'
+    html.classList.contains('light')
+      ? 'Foto de Denilson com um chapéu de palha'
+      : 'Foto de Denilson meio sério com o fundo preto, porém ele está bonitão'
   )
 }
