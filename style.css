@@ -7,21 +7,27 @@
 :root {
   --text-color: #ffffff;
   --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-color: rgb(34, 31, 50);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --hightlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-starts.svg);
+  --scrollbar-color: rgb(66, 49, 94);
+  --scrollbar-color-hover: rgb(52, 40, 74);
 }
 
 .light {
   --text-color: #000000;
   --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-color: rgb(233, 220, 247);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --hightlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
+  --scrollbar-color: rgb(209, 186, 240);
+  --scrollbar-color-hover: rgb(222, 167, 232);
 }
 
 body {
@@ -34,6 +40,7 @@ body {
 
   /* background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  background-color: var(--bg-color);
   height: 100vh;
 }
 
@@ -175,6 +182,33 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* Scroll */
+
+/* Largura do scrollbar */
+::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 10px;
+}
+
+/* Fundo do scrollbar */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: none;
+}
+
+/* Cor do scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 3px;
+  cursor: move;
+}
+
+/* Cor do scrollbar quando hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-color-hover);
 }
 
 /* media queries */
